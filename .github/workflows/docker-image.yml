@@ -5,6 +5,7 @@ on:
     branches-ignore: 'main'
     paths:
       - '**'
+      - '!data/**'
       - '!README.md'
       - '!LICENSE'
     # Publish semver tags as releases.

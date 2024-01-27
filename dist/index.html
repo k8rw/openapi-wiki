@@ -109,7 +109,7 @@
                     </div>
                     <!-- File List -->
                     <v-list class="toc" density="compact" ref="apiDataList" v-on:scroll="onScroll"
-                        :items="onSearch(apiData, searchKey)" v-model:selected=ghFile nav>
+                        :items="onSearch(apiData, searchKey)" v-model:selected=ghFile nav mandatory>
                     </v-list>
                 </v-menu>
                 <v-menu transition="slide-y-transition">
@@ -119,7 +119,7 @@
                         </v-btn>
                     </template>
 
-                    <v-list :items="apiRelease" v-model:selected=ghRelease nav>
+                    <v-list :items="apiRelease" v-model:selected=ghRelease nav mandatory>
                     </v-list>
                 </v-menu>
                 <v-card style="padding: 0 15px 10px 15px;"> <!-- top right bottom left -->

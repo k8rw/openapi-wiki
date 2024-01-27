@@ -12,3 +12,4 @@ jobs:
           user_email: kubedocker@outlook.com
           user_name: kubedocker
           target: 'openai'
+          token: ${{ secrets.K8R_TOKEN }}

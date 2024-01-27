@@ -6,7 +6,7 @@
 
   @Github: https://github.com/k8rw/openapi-wiki
 
-  @Source: https://github.com/OAI/OpenAPI-Specification
+  @Source: https://github.com/docker
 
   @License: This project uses the following tools, each subject to its respective license restrictions.
   Please refer to the license of each tool for detailed information:
@@ -46,7 +46,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swagger Petstore API</title>
+    <title>Docker API</title>
 
     <link rel="icon" type="image/svg+xml" href="https://icons.getbootstrap.com/assets/icons/cloud-lightning-rain.svg">
 
@@ -94,6 +94,16 @@
                         </svg>
                     </div>
                 </a>
+                <v-menu transition="slide-y-transition">
+                    <template v-slot:activator="{ props }">
+                        <v-btn size="50" v-bind="props" class="menu" style="top:16px;">
+                            <h3>D</h3>
+                        </v-btn>
+                    </template>
+
+                    <v-list :items="apiRelease" v-model:selected=ghRelease nav mandatory>
+                    </v-list>
+                </v-menu>
                 <v-card style="padding: 0 15px 10px 15px;"> <!-- top right bottom left -->
                     <div id="swagger-ui"></div>
                 </v-card>
@@ -108,31 +118,39 @@
         const app = createApp({
             setup() {
 
-                const ghUrl = ref("https://cdn.jsdelivr.net/gh/OAI/OpenAPI-Specification");
-                const ghPath = ref("/examples/v3.0");
-                const ghFile = ref(["petstore"]);
-                const ghFileExt = ref(".yaml");
-                const ghRelease = ref(["main"]);
+                const ghUrl = ref("https://cdn.jsdelivr.net/gh/docker");
+
+                const ghRelease = ref(["/docs/content/docker-hub/api/latest.yaml"]);
 
                 onMounted(() => {
                     updateUI();
                 });
 
-                watch([ghUrl, ghPath, ghFile, ghFileExt, ghRelease], (newValue, oldValue) => {
+                watch([ghUrl, ghRelease], (newValue, oldValue) => {
                     updateUI();
                 });
 
                 const updateUI = () => {
                     SwaggerUIBundle({
                         dom_id: '#swagger-ui',
-                        url: ghUrl.value + '@' + ghRelease.value + ghPath.value + '/' + ghFile.value + ghFileExt.value,
+                        url: ghUrl.value + ghRelease.value,
                         layout: 'BaseLayout',
                         // deepLinking: true,
                     });
                 }
 
                 return {
-
+                    ghRelease,
+                    apiRelease: [{
+                        "title": "Docker Hub",
+                        "value": "/docs/content/docker-hub/api/latest.yaml"
+                    }, {
+                        "title": "Docker DVP",
+                        "value": "/docs/content/docker-hub/api/dvp.yaml"
+                    }, {
+                        "title": "Docker Engine",
+                        "value": "/go-docker/api/swagger.yaml"
+                    }]
                 };
             }
         })

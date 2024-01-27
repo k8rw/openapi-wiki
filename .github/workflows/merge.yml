@@ -13,3 +13,15 @@ jobs:
           user_name: kubedocker
           target: 'openai'
           token: ${{ secrets.K8R_TOKEN }}
+      - uses: morbalint/git-merge-action@v1
+        with:
+          user_email: kubedocker@outlook.com
+          user_name: kubedocker
+          target: 'tgi'
+          token: ${{ secrets.K8R_TOKEN }}
+      - uses: morbalint/git-merge-action@v1
+        with:
+          user_email: kubedocker@outlook.com
+          user_name: kubedocker
+          target: '5g'
+          token: ${{ secrets.K8R_TOKEN }}

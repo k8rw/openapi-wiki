@@ -14,9 +14,9 @@ If you simply want to quickly access and bookmark pages, or download single HTML
 
 | Orgnization | Product | Link | Download | Note |
 | :------ | :------ | :----------------------------------------- |:---|:---|
-| 3GPP   | 5G Core NW   | [openapi.wiki/5g](https://www.openapi.wiki/5g)   |
-| OpenAI   | GPT, DALL·E   | [openapi.wiki/openai](https://www.openapi.wiki/openai)  |
-| Huggingface   | Text Generation Inference   | [openapi.wiki/tgi](https://www.openapi.wiki/tgi)  |
+| 3GPP   | 5G Core NW   | [openapi.wiki/5g](https://www.openapi.wiki/5g)   | [index.html](https://github.com/k8rw/openapi-wiki/raw/5g/dist/index.html)
+| OpenAI   | GPT, DALL·E   | [openapi.wiki/openai](https://www.openapi.wiki/openai)  | [index.html](https://github.com/k8rw/openapi-wiki/raw/openai/dist/index.html)
+| Huggingface   | Text Generation Inference   | [openapi.wiki/tgi](https://www.openapi.wiki/tgi)  | [index.html](https://github.com/k8rw/openapi-wiki/raw/tgi/dist/index.html)
 
 <br/>
 

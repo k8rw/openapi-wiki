@@ -1,0 +1,12 @@
+name: Merge any release branch into dev
+
+on:
+  workflow_dispatch:
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: morbalint/git-merge-action@v1
+        with:
+          target: 'openai'

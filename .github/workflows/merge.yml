@@ -1,0 +1,15 @@
+name: Merge Example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: morbalint/git-merge-action@v1
+        with:
+          user_email: kubedocker@outlook.com
+          user_name: kubedocker
+          target: 'openai'
+          token: ${{ secrets.K8R_TOKEN }}

@@ -1,4 +1,4 @@
-name: Merge any release branch into dev
+name: Merge Example
 
 on:
   workflow_dispatch:
@@ -9,4 +9,6 @@ jobs:
     steps:
       - uses: morbalint/git-merge-action@v1
         with:
+          user_email: kubedocker@outlook.com
+          user_name: kubedocker
           target: 'openai'

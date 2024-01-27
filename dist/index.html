@@ -6,7 +6,7 @@
 
   @Github: https://github.com/k8rw/openapi-wiki
 
-  @Source: https://github.com/OAI/OpenAPI-Specification
+  @Source: https://github.com/huggingface/text-generation-inference
 
   @License: This project uses the following tools, each subject to its respective license restrictions.
   Please refer to the license of each tool for detailed information:
@@ -46,7 +46,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swagger Petstore API</title>
+    <title>TGI API</title>
 
     <link rel="icon" type="image/svg+xml" href="https://icons.getbootstrap.com/assets/icons/cloud-lightning-rain.svg">
 
@@ -94,6 +94,16 @@
                         </svg>
                     </div>
                 </a>
+                <v-menu transition="slide-y-transition">
+                    <template v-slot:activator="{ props }">
+                        <v-btn size="50" v-bind="props" class="menu" style="top:16px;">
+                            <h3>V</h3>
+                        </v-btn>
+                    </template>
+
+                    <v-list :items="apiRelease" v-model:selected=ghRelease nav>
+                    </v-list>
+                </v-menu>
                 <v-card style="padding: 0 15px 10px 15px;"> <!-- top right bottom left -->
                     <div id="swagger-ui"></div>
                 </v-card>
@@ -108,10 +118,10 @@
         const app = createApp({
             setup() {
 
-                const ghUrl = ref("https://cdn.jsdelivr.net/gh/OAI/OpenAPI-Specification");
-                const ghPath = ref("/examples/v3.0");
-                const ghFile = ref(["petstore"]);
-                const ghFileExt = ref(".yaml");
+                const ghUrl = ref("https://cdn.jsdelivr.net/gh/huggingface/text-generation-inference");
+                const ghPath = ref("/docs");
+                const ghFile = ref(["openapi"]);
+                const ghFileExt = ref(".json");
                 const ghRelease = ref(["main"]);
 
                 onMounted(() => {
@@ -132,7 +142,14 @@
                 }
 
                 return {
-
+                    ghRelease,
+                    apiRelease: [{
+                        "title": "Latest",
+                        "value": "main"
+                    }, {
+                        "title": "V0.9.4",
+                        "value": "v0.9.4"
+                    }]
                 };
             }
         })

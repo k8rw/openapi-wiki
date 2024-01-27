@@ -6,7 +6,7 @@
 
   @Github: https://github.com/k8rw/openapi-wiki
 
-  @Source: https://github.com/OAI/OpenAPI-Specification
+  @Source: https://github.com/kubernetes/kubernetes
 
   @License: This project uses the following tools, each subject to its respective license restrictions.
   Please refer to the license of each tool for detailed information:
@@ -46,7 +46,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swagger Petstore API</title>
+    <title>Kubernetes API</title>
 
     <link rel="icon" type="image/svg+xml" href="https://icons.getbootstrap.com/assets/icons/cloud-lightning-rain.svg">
 
@@ -108,11 +108,11 @@
         const app = createApp({
             setup() {
 
-                const ghUrl = ref("https://cdn.jsdelivr.net/gh/OAI/OpenAPI-Specification");
-                const ghPath = ref("/examples/v3.0");
-                const ghFile = ref(["petstore"]);
-                const ghFileExt = ref(".yaml");
-                const ghRelease = ref(["main"]);
+                const ghUrl = ref("https://cdn.jsdelivr.net/gh/kubernetes/kubernetes");
+                const ghPath = ref("/api/openapi-spec");
+                const ghFile = ref(["swagger"]);
+                const ghFileExt = ref(".json");
+                const ghRelease = ref(["master"]);
 
                 onMounted(() => {
                     updateUI();

@@ -18,6 +18,7 @@ If you simply want to quickly access and bookmark pages, or download single HTML
 | OpenAI   | GPT, DALL·E   | [openapi.wiki/openai](https://www.openapi.wiki/openai)  | [index.html](https://github.com/k8rw/openapi-wiki/raw/openai/dist/index.html) | [ApiKey](https://beta.openai.com/account/api-keys)
 | Huggingface   | Text Generation Inference   | [openapi.wiki/tgi](https://www.openapi.wiki/tgi)  | [index.html](https://github.com/k8rw/openapi-wiki/raw/tgi/dist/index.html)
 | Debian   | Debian Code Search   | [openapi.wiki/debian](https://www.openapi.wiki/debian)  | [index.html](https://github.com/k8rw/openapi-wiki/raw/debian/dist/index.html) | [ApiKey](https://codesearch.debian.net/apikeys)
+| Docker   | Hub, DVP, Engine   | [openapi.wiki/docker](https://www.openapi.wiki/docker)  | [index.html](https://github.com/k8rw/openapi-wiki/raw/docker/dist/index.html)
 
 <br/>
 

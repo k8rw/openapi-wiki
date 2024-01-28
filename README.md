@@ -20,6 +20,7 @@ If you simply want to quickly access and bookmark pages, or download single HTML
 | Debian   | Debian Code Search   | [openapi.wiki/debian](https://www.openapi.wiki/debian)  | [index.html](https://github.com/k8rw/openapi-wiki/raw/debian/dist/index.html) | [ApiKey](https://codesearch.debian.net/apikeys)
 | Docker   | Hub, DVP, Engine   | [openapi.wiki/docker](https://www.openapi.wiki/docker)  | [index.html](https://github.com/k8rw/openapi-wiki/raw/docker/dist/index.html)
 | Kubernetes   | Kubernetes   | [openapi.wiki/k8s](https://www.openapi.wiki/k8s)  | [index.html](https://github.com/k8rw/openapi-wiki/raw/k8s/dist/index.html)
+| Wolfram   | Wolfram Alpha   | [openapi.wiki/wolfram](https://www.openapi.wiki/wolfram)  | [index.html](https://github.com/k8rw/openapi-wiki/raw/wolfram/dist/index.html)
 
 <br/>
 
